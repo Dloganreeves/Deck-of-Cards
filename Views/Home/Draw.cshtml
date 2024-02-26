@@ -1,0 +1,19 @@
+﻿@model DrawModel
+
+<form asp-method="post" asp-action="ShuffleDeck">
+    <h1>Welcome to Drawing Cards </h1>
+    <button type="submit"> Shuffle Deck</button>
+</form>
+
+
+<form asp method="post" asp-action="Draw">
+
+    <button type="submit"> Draw 5 cards</button>
+</form>
+
+@{
+    foreach (Card c in Model.Cards)
+    {
+        <img src="@c.Image" />
+    }
+}
